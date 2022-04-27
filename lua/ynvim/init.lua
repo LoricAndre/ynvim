@@ -1,5 +1,4 @@
 local vim = vim
-local yaml = require'lyaml'
 local utils = require'ynvim.utils'
 local M = {}
 

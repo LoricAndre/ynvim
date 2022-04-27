@@ -1,3 +1,4 @@
+local yaml = require'lyaml'
 local M = {}
 
 local getKeys = function(t)
