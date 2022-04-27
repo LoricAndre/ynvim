@@ -94,7 +94,7 @@ end
 
 M.setup = function(filename)
   local config = M.getConfig(filename)
-  M.let(config.variables)
+  M.let(config.globals)
   M.set(config.options)
   M.map(config.mappings)
   M.aug(config.autocmds)
