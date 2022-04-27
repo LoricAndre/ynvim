@@ -23,7 +23,7 @@ M.eval = function(obj)
       if isLua(value) then
           obj[key] = loadstring('return ' .. value.lua)()
       else
-        obj[key] = eval(value)
+        obj[key] = M.eval(value)
       end
     end
   end
