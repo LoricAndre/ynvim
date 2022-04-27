@@ -93,8 +93,8 @@ M.aug = function(name, list) -- TODO: use lua nvim_create_autocmd
   end
 end
 
-M.setup = function()
-  local config = M.getConfig(vim.o.config)
+M.setup = function(filename)
+  local config = M.getConfig(filename)
   M.let(config.variables)
   M.map(config.mappings)
   M.aug(config.autocmds)
