@@ -3,10 +3,10 @@ local utils = require'ynvim.utils'
 local M = {}
 
 M.getConfig = function(filename)
-  local baseDir = vim.fn.stdpath('config') .. '/'
-  local config = utils.load(baseDir .. filename)
+  local baseDir = vim.fn.stdpath('config') + '/'
+  local config = utils.load(baseDir + filename)
   for _, filename in ipairs(config.includes or {}) do
-    local file = utils.load(baseDir .. filename)
+    local file = utils.load(baseDir + filename)
     config = utils.merge(config, file)
   end
   return config
